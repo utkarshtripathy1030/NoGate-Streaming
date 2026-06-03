@@ -1,0 +1,111 @@
+.row {
+  margin: 40px 0 20px 60px;
+}
+
+.rowHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-right: 60px;
+  margin-bottom: 12px;
+}
+
+.rowHeader h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #e5e5e5;
+  margin: 0;
+}
+
+.hint {
+  color: #888;
+  font-size: 0.9rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.rowCards {
+  display: flex;
+  overflow-x: auto;
+  gap: 12px;
+  padding-bottom: 16px;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #e50914 #222;
+}
+
+.rowCards::-webkit-scrollbar {
+  height: 8px;
+}
+
+.rowCards::-webkit-scrollbar-track {
+  background: #222;
+}
+
+.rowCards::-webkit-scrollbar-thumb {
+  background: #e50914;
+  border-radius: 4px;
+}
+
+.rowCards::-webkit-scrollbar-thumb:hover {
+  background: #b81d24;
+}
+
+.skeletonCard {
+  flex: 0 0 180px;
+  height: 270px;
+  background: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  border-radius: 8px;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .row {
+    margin-left: 40px;
+  }
+
+  .rowHeader {
+    margin-right: 40px;
+  }
+
+  .rowHeader h2 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    margin-left: 20px;
+  }
+
+  .rowHeader {
+    margin-right: 20px;
+  }
+
+  .rowHeader h2 {
+    font-size: 1.2rem;
+  }
+
+  .hint {
+    display: none;
+  }
+}

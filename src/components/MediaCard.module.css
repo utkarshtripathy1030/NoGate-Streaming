@@ -1,0 +1,94 @@
+.card {
+  flex: 0 0 180px;
+  transition: transform 0.3s, box-shadow 0.2s;
+  cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #1a1a1a;
+  position: relative;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.cardImg {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  background: #2a2a2a;
+}
+
+.cardInfo {
+  padding: 8px 6px;
+}
+
+.cardTitle {
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #e5e5e5;
+}
+
+.cardRating {
+  font-size: 0.7rem;
+  color: #ffcd3c;
+}
+
+.cardButtons {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  gap: 6px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.card:hover .cardButtons {
+  opacity: 1;
+}
+
+.myListBtn {
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.myListBtn:hover {
+  background: rgba(229, 9, 20, 0.9);
+}
+
+.myListBtn.added {
+  color: #e50914;
+}
+
+.progressBadge {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background: rgba(0, 0, 0, 0.7);
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 20px;
+  color: #e50914;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 0 0 140px;
+  }
+
+  .cardImg {
+    height: 210px;
+  }
+}
